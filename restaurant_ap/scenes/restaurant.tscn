@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://d3jnep8w376kr"]
+
+[ext_resource type="Texture2D" uid="uid://dlqi6ir251lsa" path="res://restaurant_ap/assets/restaurant_test.png" id="1_1im4s"]
+[ext_resource type="Texture2D" uid="uid://bmoxyqwv7bgds" path="res://restaurant_ap/assets/counters_test.png" id="2_45g31"]
+[ext_resource type="Script" uid="uid://bg1h8e5expqqe" path="res://restaurant_ap/scenes/fridge.gd" id="3_hdif0"]
+[ext_resource type="Texture2D" uid="uid://mv4lr5v3p3bc" path="res://restaurant_ap/assets/fridge.png" id="3_jmpph"]
+[ext_resource type="PackedScene" uid="uid://cghcf3yw8jjdo" path="res://restaurant_ap/scenes/ingredient_menu.tscn" id="5_hdif0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_45g31"]
+size = Vector2(1002, 170)
+
+[node name="Restaurant" type="Node" unique_id=1157176009]
+
+[node name="Game" type="CanvasLayer" parent="." unique_id=66587329]
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
+
+[node name="Floor" type="Sprite2D" parent="Game" unique_id=1774123584]
+texture = ExtResource("1_1im4s")
+centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Game" unique_id=158671861]
+position = Vector2(0, 374)
+
+[node name="CountersTest" type="Sprite2D" parent="Game/StaticBody2D" unique_id=1583325309]
+texture = ExtResource("2_45g31")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/StaticBody2D" unique_id=382639871]
+position = Vector2(501, 838)
+shape = SubResource("RectangleShape2D_45g31")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Game/StaticBody2D" unique_id=855182561]
+polygon = PackedVector2Array(0, 0, 1002, 0, 1002, 568, 798, 568, 798, 264, 0, 264)
+
+[node name="Fridge" type="Node2D" parent="Game" unique_id=1879966795 node_paths=PackedStringArray("menu")]
+script = ExtResource("3_hdif0")
+menu = NodePath("../../UI/IngredientMenu")
+
+[node name="Sprite" type="Sprite2D" parent="Game/Fridge" unique_id=1411592989]
+position = Vector2(92, 181)
+texture = ExtResource("3_jmpph")
+centered = false
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1590440469]
+
+[node name="IngredientMenu" parent="UI" unique_id=1592501898 instance=ExtResource("5_hdif0")]
+visible = false
+anchor_right = 0.15200001
+anchor_bottom = 0.47500002
+offset_bottom = -1.5258789e-05
+grow_horizontal = 1

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://d7mor1v4qvpy"]
+
+[ext_resource type="Script" uid="uid://dis6im45yn43k" path="res://restaurant_ap/resources/ingredients/ingredient_data.gd" id="2_2w76e"]
+[ext_resource type="Texture2D" uid="uid://b6ne1qxbc8r3h" path="res://restaurant_ap/assets/pizza.png" id="2_iobct"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mxmve"]
+load_path = "res://.godot/imported/food_icons.png-03939b70ba5114ada93f8cfd51a3dea6.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iobct"]
+atlas = SubResource("CompressedTexture2D_mxmve")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2w76e"]
+atlas = ExtResource("2_iobct")
+region = Rect2(0, 68, 80, 68)
+
+[resource]
+script = ExtResource("2_2w76e")
+name = "Pesto"
+icon_image = SubResource("AtlasTexture_iobct")
+stack_behavior = Dictionary[String, String]({
+"pizza": "topping"
+})
+stack_images = Dictionary[String, Texture2D]({
+"pizza": SubResource("AtlasTexture_2w76e")
+})
+metadata/_custom_type_script = "uid://dis6im45yn43k"

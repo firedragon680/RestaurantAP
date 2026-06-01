@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cghcf3yw8jjdo"]
+
+[ext_resource type="Script" uid="uid://cbxhvqb6aiw2r" path="res://restaurant_ap/scenes/ingredient_menu.gd" id="1_cguvt"]
+
+[node name="IngredientMenu" type="PanelContainer" unique_id=1592501898]
+anchors_preset = -1
+anchor_right = 0.24000001
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_cguvt")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=542346121]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer" unique_id=1865122438]
+layout_mode = 2
+columns = 4

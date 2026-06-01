@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://bf5l1toylcv0i"]
+
+[ext_resource type="Texture2D" uid="uid://c1ru6n0tu3qej" path="res://restaurant_ap/assets/food_icons.png" id="1_o85nn"]
+[ext_resource type="Script" uid="uid://dis6im45yn43k" path="res://restaurant_ap/resources/ingredients/ingredient_data.gd" id="2_q3vjr"]
+[ext_resource type="Texture2D" uid="uid://b6ne1qxbc8r3h" path="res://restaurant_ap/assets/pizza.png" id="3_q3vjr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3vjr"]
+atlas = ExtResource("1_o85nn")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17pu0"]
+atlas = ExtResource("3_q3vjr")
+region = Rect2(0, 0, 80, 68)
+
+[resource]
+script = ExtResource("2_q3vjr")
+name = "Pizza Crust"
+icon_image = SubResource("AtlasTexture_q3vjr")
+stack_behavior = Dictionary[String, String]({
+"pizza": "crust",
+"plate": "pizza"
+})
+stack_images = Dictionary[String, Texture2D]({
+"pizza": SubResource("AtlasTexture_17pu0")
+})
+metadata/_custom_type_script = "uid://dis6im45yn43k"

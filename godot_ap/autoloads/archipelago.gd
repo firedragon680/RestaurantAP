@@ -5,7 +5,7 @@
 class_name AP extends Node
 
 ## The game name to connect to. Empty string for `TextOnly` / `Tracker`/ `HintGame` clients.
-@export var AP_GAME_NAME := ""
+@export var AP_GAME_NAME := "RestaurantAP"
 ## The tags for your game.
 @export var AP_GAME_TAGS: Array[String] = []
 ## The version of your client. Arbitrary number for you to manage.
