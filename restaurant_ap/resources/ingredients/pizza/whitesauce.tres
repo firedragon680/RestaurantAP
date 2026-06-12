@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://btphrvfyvyhrn"]
+
+[ext_resource type="Script" uid="uid://dis6im45yn43k" path="res://restaurant_ap/resources/ingredients/ingredient_data.gd" id="1_mxkvs"]
+[ext_resource type="Texture2D" uid="uid://b6ne1qxbc8r3h" path="res://restaurant_ap/assets/pizza.png" id="2_0nlkb"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mxmve"]
+load_path = "res://.godot/imported/food_icons.png-03939b70ba5114ada93f8cfd51a3dea6.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0nlkb"]
+atlas = SubResource("CompressedTexture2D_mxmve")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxkvs"]
+atlas = ExtResource("2_0nlkb")
+region = Rect2(0, 136, 80, 68)
+
+[resource]
+resource_name = "whitesauce"
+script = ExtResource("1_mxkvs")
+name = "White Sauce"
+icon_image = SubResource("AtlasTexture_0nlkb")
+stack_behavior = Dictionary[String, String]({
+"pizza": "sauce"
+})
+stack_images = Dictionary[String, Texture2D]({
+"pizza": SubResource("AtlasTexture_mxkvs")
+})
+metadata/_custom_type_script = "uid://dis6im45yn43k"

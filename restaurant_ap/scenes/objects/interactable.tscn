@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cw12bnuufj8te"]
+
+[ext_resource type="Script" uid="uid://n2e4txv6c1ta" path="res://restaurant_ap/scenes/objects/interactable.gd" id="1_1lrwe"]
+
+[node name="Interactable" type="Area2D" unique_id=985006439 groups=["clickable"]]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_1lrwe")
+metadata/_custom_type_script = "uid://n2e4txv6c1ta"

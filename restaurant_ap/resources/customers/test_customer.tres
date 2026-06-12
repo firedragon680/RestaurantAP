@@ -1,0 +1,92 @@
+[gd_resource type="Resource" script_class="CustomerData" format=3 uid="uid://c8xvhas1ett2d"]
+
+[ext_resource type="Script" uid="uid://yxy05la2cxmk" path="res://restaurant_ap/resources/customers/customer_data.gd" id="1_1hpbw"]
+[ext_resource type="Texture2D" uid="uid://c001moyn2ncr8" path="res://restaurant_ap/assets/characters/customer_test.png" id="1_n1bnk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1bnk"]
+atlas = ExtResource("1_n1bnk")
+region = Rect2(0, 320, 120, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7r2nm"]
+atlas = ExtResource("1_n1bnk")
+region = Rect2(120, 320, 120, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ejnt"]
+atlas = ExtResource("1_n1bnk")
+region = Rect2(0, 320, 120, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bg2w3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1bnk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7r2nm")
+}],
+"loop": true,
+"name": &"sitting",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ejnt")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ercjo"]
+atlas = ExtResource("1_n1bnk")
+region = Rect2(0, 0, 120, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4ih6"]
+atlas = ExtResource("1_n1bnk")
+region = Rect2(120, 0, 120, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4sjpj"]
+atlas = ExtResource("1_n1bnk")
+region = Rect2(0, 0, 120, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p12tc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ercjo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4ih6")
+}],
+"loop": true,
+"name": &"sitting",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4sjpj")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[resource]
+resource_name = "test"
+script = ExtResource("1_1hpbw")
+name = "Testさん"
+images_top = SubResource("SpriteFrames_p12tc")
+images_bottom = SubResource("SpriteFrames_bg2w3")
+image_offset = Vector2(0, -149)
+likes = Array[String](["plate", "pizza_crust"])
+metadata/_custom_type_script = "uid://yxy05la2cxmk"

@@ -13,6 +13,7 @@ atlas = ExtResource("3_q3vjr")
 region = Rect2(0, 0, 80, 68)
 
 [resource]
+resource_name = "pizzacrust"
 script = ExtResource("2_q3vjr")
 name = "Pizza Crust"
 icon_image = SubResource("AtlasTexture_q3vjr")

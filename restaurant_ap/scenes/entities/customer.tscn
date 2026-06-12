@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://co8wiewqwkxcp"]
+
+[ext_resource type="Script" uid="uid://de6jb3ccjiqvx" path="res://restaurant_ap/scenes/entities/customer.gd" id="1_mh10q"]
+[ext_resource type="PackedScene" uid="uid://dvp7yux3ewb2t" path="res://restaurant_ap/scenes/entities/thought_bubble.tscn" id="2_1n3j8"]
+
+[node name="Customer" type="CharacterBody2D" unique_id=874793626 node_paths=PackedStringArray("thought")]
+z_index = 1
+y_sort_enabled = true
+input_pickable = true
+script = ExtResource("1_mh10q")
+thought = NodePath("ThoughtBubble")
+metadata/_custom_type_script = "uid://de6jb3ccjiqvx"
+
+[node name="ThoughtBubble" parent="." unique_id=1677461436 instance=ExtResource("2_1n3j8")]
+z_index = 3
+position = Vector2(0, -320)

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cndjsh4vxgnao"]
+
+[ext_resource type="Script" uid="uid://bu6wtf61sl8sg" path="res://restaurant_ap/scenes/ui/order_list.gd" id="1_rb8i1"]
+
+[node name="OrderList" type="ScrollContainer" unique_id=539189327 node_paths=PackedStringArray("box")]
+anchors_preset = -1
+anchor_right = 0.22900002
+anchor_bottom = 0.37
+offset_right = 0.24998474
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 4
+script = ExtResource("1_rb8i1")
+box = NodePath("VBoxContainer")
+metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1115661156]
+layout_mode = 2

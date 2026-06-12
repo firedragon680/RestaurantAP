@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://cgg6yxmyhgb4r"]
+
+[ext_resource type="Texture2D" uid="uid://c1ru6n0tu3qej" path="res://restaurant_ap/assets/food_icons.png" id="1_paa20"]
+[ext_resource type="Script" uid="uid://dis6im45yn43k" path="res://restaurant_ap/resources/ingredients/ingredient_data.gd" id="2_qe6jm"]
+[ext_resource type="Texture2D" uid="uid://b6ne1qxbc8r3h" path="res://restaurant_ap/assets/pizza.png" id="3_vt6ha"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_paa20"]
+atlas = ExtResource("1_paa20")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lull"]
+atlas = ExtResource("3_vt6ha")
+region = Rect2(0, 476, 80, 68)
+
+[resource]
+resource_name = "pepperoni"
+script = ExtResource("2_qe6jm")
+name = "Pepperoni"
+icon_image = SubResource("AtlasTexture_paa20")
+stack_behavior = Dictionary[String, String]({
+"pizza": "topping"
+})
+stack_images = Dictionary[String, Texture2D]({
+"pizza": SubResource("AtlasTexture_8lull")
+})
+metadata/_custom_type_script = "uid://dis6im45yn43k"

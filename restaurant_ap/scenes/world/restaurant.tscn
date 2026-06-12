@@ -1,0 +1,272 @@
+[gd_scene format=3 uid="uid://d3jnep8w376kr"]
+
+[ext_resource type="Texture2D" uid="uid://dlqi6ir251lsa" path="res://restaurant_ap/assets/restaurant_test.png" id="1_1im4s"]
+[ext_resource type="Script" uid="uid://cuwdei44iiv14" path="res://restaurant_ap/scenes/world/restaurant.gd" id="1_8uqa0"]
+[ext_resource type="Texture2D" uid="uid://bmoxyqwv7bgds" path="res://restaurant_ap/assets/counters_test.png" id="2_45g31"]
+[ext_resource type="PackedScene" uid="uid://dbm4k3i2mlt6i" path="res://restaurant_ap/scenes/ui/order_viewer.tscn" id="2_o45gr"]
+[ext_resource type="Script" uid="uid://bg1h8e5expqqe" path="res://restaurant_ap/scenes/objects/fridge.gd" id="3_hdif0"]
+[ext_resource type="Texture2D" uid="uid://mv4lr5v3p3bc" path="res://restaurant_ap/assets/fridge.png" id="3_jmpph"]
+[ext_resource type="PackedScene" uid="uid://b4uhrr7qemfmh" path="res://restaurant_ap/scenes/ui/day_timer.tscn" id="4_nql1u"]
+[ext_resource type="Script" uid="uid://n2e4txv6c1ta" path="res://restaurant_ap/scenes/objects/interactable.gd" id="5_4verq"]
+[ext_resource type="PackedScene" uid="uid://o0rue7g3xr60" path="res://restaurant_ap/scenes/entities/player.tscn" id="5_aahs3"]
+[ext_resource type="PackedScene" uid="uid://cghcf3yw8jjdo" path="res://restaurant_ap/scenes/ui/ingredient_menu.tscn" id="5_hdif0"]
+[ext_resource type="Texture2D" uid="uid://ca2b037ggg88j" path="res://restaurant_ap/assets/ranks.png" id="6_47jis"]
+[ext_resource type="Resource" uid="uid://cf5jkjljcbn6y" path="res://restaurant_ap/resources/ingredients/plate/plate.tres" id="6_ftscm"]
+[ext_resource type="Texture2D" uid="uid://coqxsxgte4wov" path="res://restaurant_ap/assets/plate.png" id="6_kkc7y"]
+[ext_resource type="Script" uid="uid://nuqv832udnbw" path="res://restaurant_ap/scenes/objects/pizza_oven.gd" id="11_5l31b"]
+[ext_resource type="PackedScene" uid="uid://brnwrhrs6xmhc" path="res://restaurant_ap/scenes/objects/process_timer.tscn" id="12_1m6eu"]
+[ext_resource type="Texture2D" uid="uid://01kbldn27bhe" path="res://restaurant_ap/assets/oven_test.png" id="12_s6hh0"]
+[ext_resource type="Script" uid="uid://c6vtlkgf81g5c" path="res://restaurant_ap/scenes/objects/garbage.gd" id="14_6nmii"]
+[ext_resource type="Texture2D" uid="uid://cmrunf7uf0qjm" path="res://restaurant_ap/assets/garbage_test.png" id="15_24rkg"]
+[ext_resource type="PackedScene" uid="uid://dn0p0vfpalyrc" path="res://restaurant_ap/scenes/world/player_manager.tscn" id="16_24rkg"]
+[ext_resource type="Script" uid="uid://cmf0bmnuotw8m" path="res://restaurant_ap/scenes/world/customer_manager.gd" id="17_5l31b"]
+[ext_resource type="PackedScene" uid="uid://blwk0kihmvc7q" path="res://restaurant_ap/scenes/objects/table.tscn" id="18_dtumm"]
+[ext_resource type="PackedScene" uid="uid://db5ra8wrys0tx" path="res://restaurant_ap/scenes/ui/rank_meter.tscn" id="21_dt7lr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mk1e"]
+atlas = ExtResource("6_47jis")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_45g31"]
+size = Vector2(1002, 170)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ftscm"]
+radius = 38.052597
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8uqa0"]
+size = Vector2(306, 457)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6nmii"]
+size = Vector2(217, 158)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5l31b"]
+size = Vector2(112, 64)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_aahs3"]
+vertices = PackedVector2Array(1011, 1152.9922, 8.9921875, 1153.9922, 9, 684, 787, 988, 1979, 590, 1979, 666, 1205, 666, 1011, 590, 1011, 988, 1205, 1322, 1011, 1322, 787, 684)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 7, 6, 9), PackedInt32Array(9, 10, 0), PackedInt32Array(8, 9, 0), PackedInt32Array(2, 11, 3), PackedInt32Array(8, 0, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-1, 674, 797, 674, 797, 978, 1001, 978, 1001, 580, 1989, 580, 1989, 676, 1215, 676, 1215, 1332, 1001, 1332, 1001, 1163, -1, 1164)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_5l31b"]
+vertices = PackedVector2Array(2143, 1322, 1980, 1322, 1980, 484, 2143, 484)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1970, 474, 2153, 474, 2153, 1332, 1970, 1332)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_dtumm"]
+vertices = PackedVector2Array(1979, 890, 1206, 890, 1206, 814, 1979, 814)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1196, 804, 1989, 804, 1989, 900, 1196, 900)])
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_avx13"]
+vertices = PackedVector2Array(1979, 890, 1205, 890, 1205, 814, 1979, 814)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1195, 804, 1989, 804, 1989, 900, 1195, 900)])
+
+[node name="Restaurant" type="Node" unique_id=1157176009 node_paths=PackedStringArray("day_timer", "meter")]
+script = ExtResource("1_8uqa0")
+day_timer = NodePath("UI/DayTimer")
+meter = NodePath("UI/RankMeter")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1590440469]
+
+[node name="OrderViewer" parent="UI" unique_id=1763636252 instance=ExtResource("2_o45gr")]
+anchor_left = 0.85
+anchor_top = 0.55
+
+[node name="IngredientMenu" parent="UI" unique_id=1592501898 instance=ExtResource("5_hdif0")]
+visible = false
+anchor_right = 0.15200001
+anchor_bottom = 0.41000003
+offset_bottom = -1.5258789e-05
+grow_horizontal = 1
+
+[node name="DayTimer" parent="UI" unique_id=61980303 instance=ExtResource("4_nql1u")]
+
+[node name="RankMeter" parent="UI" unique_id=1385513047 instance=ExtResource("21_dt7lr")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_right = 0.0
+offset_bottom = 320.0
+grow_horizontal = 0
+
+[node name="WinPopup" type="CenterContainer" parent="UI" unique_id=1729669270]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="UI/WinPopup" unique_id=1860444956]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/WinPopup/PanelContainer" unique_id=1644167210]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/WinPopup/PanelContainer/VBoxContainer" unique_id=495973207]
+layout_mode = 2
+text = "Day Over!
+Rank:"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="UI/WinPopup/PanelContainer/VBoxContainer" unique_id=743253095]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = SubResource("AtlasTexture_0mk1e")
+stretch_mode = 2
+
+[node name="Button" type="Button" parent="UI/WinPopup/PanelContainer/VBoxContainer" unique_id=1318099397]
+layout_mode = 2
+size_flags_horizontal = 4
+text = " Main Menu "
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=331458013]
+anchor_mode = 0
+zoom = Vector2(0.5, 0.5)
+
+[node name="Player" parent="." unique_id=1493797892 instance=ExtResource("5_aahs3")]
+position = Vector2(217, 967)
+
+[node name="Floor" type="Sprite2D" parent="." unique_id=1774123584]
+texture = ExtResource("1_1im4s")
+centered = false
+
+[node name="Counter" type="StaticBody2D" parent="." unique_id=158671861]
+z_index = 1
+position = Vector2(0, 374)
+
+[node name="CountersTest" type="Sprite2D" parent="Counter" unique_id=1583325309]
+texture = ExtResource("2_45g31")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Counter" unique_id=382639871]
+position = Vector2(501, 838)
+shape = SubResource("RectangleShape2D_45g31")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Counter" unique_id=855182561]
+polygon = PackedVector2Array(0, 0, 0, 264, 798, 264, 798, 568, 1002, 568, 1002, 0)
+
+[node name="Plates" type="Area2D" parent="." unique_id=1120206067]
+z_index = 2
+position = Vector2(704, 438)
+script = ExtResource("5_4verq")
+target_location = Vector2(0, 246)
+ingredient = ExtResource("6_ftscm")
+metadata/_custom_type_script = "uid://n2e4txv6c1ta"
+
+[node name="Plate" type="Sprite2D" parent="Plates" unique_id=810934426]
+texture = ExtResource("6_kkc7y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plates" unique_id=1105592116]
+shape = SubResource("CircleShape2D_ftscm")
+
+[node name="Fridge" type="Area2D" parent="." unique_id=706057388 node_paths=PackedStringArray("menu")]
+z_index = 2
+position = Vector2(92, 181)
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("3_hdif0")
+menu = NodePath("../UI/IngredientMenu")
+target_location = Vector2(153, 400)
+metadata/_custom_type_script = "uid://n2e4txv6c1ta"
+
+[node name="Sprite" type="Sprite2D" parent="Fridge" unique_id=1411592989]
+texture = ExtResource("3_jmpph")
+centered = false
+
+[node name="MouseBox" type="CollisionShape2D" parent="Fridge" unique_id=1198529377]
+position = Vector2(153, 228.5)
+shape = SubResource("RectangleShape2D_8uqa0")
+
+[node name="PizzaOven" type="Area2D" parent="." unique_id=573754976 node_paths=PackedStringArray("timer")]
+z_index = 2
+position = Vector2(525, 421)
+script = ExtResource("11_5l31b")
+timer = NodePath("ProcessTimer")
+target_location = Vector2(0, 212)
+metadata/_custom_type_script = "uid://caue7c85us28p"
+
+[node name="ProcessTimer" parent="PizzaOven" unique_id=1508652802 instance=ExtResource("12_1m6eu")]
+offset_left = -51.0
+offset_top = -99.0
+offset_right = 49.0
+offset_bottom = -84.0
+
+[node name="Sprite2D" type="Sprite2D" parent="PizzaOven" unique_id=1111666852]
+texture = ExtResource("12_s6hh0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PizzaOven" unique_id=1427728118]
+shape = SubResource("RectangleShape2D_6nmii")
+
+[node name="Garbage" type="Area2D" parent="." unique_id=1193295176]
+z_index = 2
+position = Vector2(700, 608)
+script = ExtResource("14_6nmii")
+target_location = Vector2(0, 10)
+metadata/_custom_type_script = "uid://ctwhsbbhpmkik"
+
+[node name="Sprite2D" type="Sprite2D" parent="Garbage" unique_id=141558533]
+texture = ExtResource("15_24rkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Garbage" unique_id=998976268]
+shape = SubResource("RectangleShape2D_5l31b")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1120790741]
+position = Vector2(1, -36)
+navigation_polygon = SubResource("NavigationPolygon_aahs3")
+
+[node name="NavigationRegion2D2" type="NavigationRegion2D" parent="." unique_id=557061102]
+position = Vector2(1, -36)
+navigation_polygon = SubResource("NavigationPolygon_5l31b")
+
+[node name="NavigationRegion2D3" type="NavigationRegion2D" parent="." unique_id=470740775]
+position = Vector2(1, -36)
+navigation_polygon = SubResource("NavigationPolygon_dtumm")
+
+[node name="NavigationRegion2D4" type="NavigationRegion2D" parent="." unique_id=136966345]
+position = Vector2(1, 223)
+navigation_polygon = SubResource("NavigationPolygon_avx13")
+
+[node name="PlayerManager" parent="." unique_id=1645008745 node_paths=PackedStringArray("player") instance=ExtResource("16_24rkg")]
+player = NodePath("../Player")
+
+[node name="CustomerManager" type="Node" parent="." unique_id=276126867 node_paths=PackedStringArray("player_manager", "order_viewer")]
+script = ExtResource("17_5l31b")
+player_manager = NodePath("../PlayerManager")
+order_viewer = NodePath("../UI/OrderViewer")
+metadata/_custom_type_script = "uid://cmf0bmnuotw8m"
+
+[node name="Table 1" parent="." unique_id=253708565 instance=ExtResource("18_dtumm")]
+z_index = 2
+position = Vector2(1263, 471)
+target_location = Vector2(0, 65)
+
+[node name="Table 2" parent="." unique_id=1328527474 instance=ExtResource("18_dtumm")]
+z_index = 2
+position = Vector2(1731, 471)
+target_location = Vector2(0, 65)
+
+[node name="Table 3" parent="." unique_id=2055369514 instance=ExtResource("18_dtumm")]
+z_index = 2
+position = Vector2(1388, 695)
+target_location = Vector2(0, 65)
+
+[node name="Table 4" parent="." unique_id=519652490 instance=ExtResource("18_dtumm")]
+z_index = 2
+position = Vector2(1856, 695)
+target_location = Vector2(0, 65)
+
+[node name="Table 5" parent="." unique_id=1938529544 instance=ExtResource("18_dtumm")]
+z_index = 2
+position = Vector2(1392, 955)
+target_location = Vector2(0, 65)
+
+[node name="Table 6" parent="." unique_id=310825599 instance=ExtResource("18_dtumm")]
+z_index = 2
+position = Vector2(1860, 955)
+target_location = Vector2(0, 65)
+
+[connection signal="pressed" from="UI/WinPopup/PanelContainer/VBoxContainer/Button" to="." method="to_main_menu"]

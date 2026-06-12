@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://cf5jkjljcbn6y"]
+
+[ext_resource type="Texture2D" uid="uid://coqxsxgte4wov" path="res://restaurant_ap/assets/plate.png" id="1_l6j8w"]
+[ext_resource type="Script" uid="uid://dis6im45yn43k" path="res://restaurant_ap/resources/ingredients/ingredient_data.gd" id="2_5rak1"]
+
+[resource]
+resource_name = "plate"
+script = ExtResource("2_5rak1")
+name = "Plate"
+icon_image = ExtResource("1_l6j8w")
+stack_behavior = Dictionary[String, String]({
+"none": "plate",
+"plate": "plate"
+})
+stack_images = Dictionary[String, Texture2D]({
+"pizza": ExtResource("1_l6j8w"),
+"plate": ExtResource("1_l6j8w")
+})
+metadata/_custom_type_script = "uid://dis6im45yn43k"

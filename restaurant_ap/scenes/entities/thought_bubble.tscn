@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://dvp7yux3ewb2t"]
+
+[ext_resource type="Script" uid="uid://c17rsb0erbt4e" path="res://restaurant_ap/scenes/entities/thought_bubble.gd" id="1_gmdwb"]
+[ext_resource type="Texture2D" uid="uid://b4umuftrwdfjw" path="res://restaurant_ap/assets/thoughtbubble.png" id="2_mpfnf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ba6w7"]
+atlas = ExtResource("2_mpfnf")
+region = Rect2(0, 0, 120, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmdwb"]
+atlas = ExtResource("2_mpfnf")
+region = Rect2(360, 0, 120, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpfnf"]
+atlas = ExtResource("2_mpfnf")
+region = Rect2(360, 140, 120, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aygxy"]
+atlas = ExtResource("2_mpfnf")
+region = Rect2(600, 0, 120, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2qdw"]
+atlas = ExtResource("2_mpfnf")
+region = Rect2(600, 140, 120, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a35fa"]
+atlas = ExtResource("2_mpfnf")
+region = Rect2(240, 0, 120, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yradb"]
+atlas = ExtResource("2_mpfnf")
+region = Rect2(240, 140, 120, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuf1q"]
+atlas = ExtResource("2_mpfnf")
+region = Rect2(120, 0, 120, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05eeo"]
+atlas = ExtResource("2_mpfnf")
+region = Rect2(120, 140, 120, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1s25"]
+atlas = ExtResource("2_mpfnf")
+region = Rect2(480, 0, 120, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uo1nu"]
+atlas = ExtResource("2_mpfnf")
+region = Rect2(480, 140, 120, 140)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jwmvu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ba6w7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmdwb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpfnf")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aygxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2qdw")
+}],
+"loop": true,
+"name": &"hungry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a35fa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yradb")
+}],
+"loop": true,
+"name": &"ordering",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cuf1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05eeo")
+}],
+"loop": true,
+"name": &"reading",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1s25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uo1nu")
+}],
+"loop": true,
+"name": &"unhappy",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpmp0"]
+size = Vector2(90, 90)
+
+[node name="ThoughtBubble" type="Area2D" unique_id=632155786 node_paths=PackedStringArray("sprite") groups=["bubble"]]
+script = ExtResource("1_gmdwb")
+sprite = NodePath("AnimatedSprite2D")
+metadata/_custom_type_script = "uid://c17rsb0erbt4e"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=64602418]
+sprite_frames = SubResource("SpriteFrames_jwmvu")
+animation = &"unhappy"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1787339764]
+position = Vector2(0, -18)
+shape = SubResource("RectangleShape2D_fpmp0")

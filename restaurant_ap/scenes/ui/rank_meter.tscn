@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://db5ra8wrys0tx"]
+
+[ext_resource type="Texture2D" uid="uid://b8ygmfwlcxwfp" path="res://restaurant_ap/assets/day_meter.png" id="1_stxdx"]
+[ext_resource type="Script" uid="uid://b7gg23nfdacj4" path="res://restaurant_ap/scenes/ui/rank_meter.gd" id="2_6smuq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6smuq"]
+atlas = ExtResource("1_stxdx")
+region = Rect2(0, 0, 40, 320)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1cgjx"]
+load_path = "res://.godot/imported/day_meter.png-f5e258405ab39b6f17cacabaa40ab484.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5kvm"]
+atlas = SubResource("CompressedTexture2D_1cgjx")
+region = Rect2(80, 0, 40, 320)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dg11p"]
+load_path = "res://.godot/imported/day_meter.png-f5e258405ab39b6f17cacabaa40ab484.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgpy0"]
+atlas = SubResource("CompressedTexture2D_dg11p")
+region = Rect2(40, 0, 40, 320)
+
+[node name="RankMeter" type="TextureProgressBar" unique_id=1385513047]
+offset_right = 40.0
+offset_bottom = 40.0
+max_value = 320.0
+fill_mode = 3
+texture_under = SubResource("AtlasTexture_6smuq")
+texture_over = SubResource("AtlasTexture_e5kvm")
+texture_progress = SubResource("AtlasTexture_jgpy0")
+script = ExtResource("2_6smuq")

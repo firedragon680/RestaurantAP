@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://o0rue7g3xr60"]
+
+[ext_resource type="Texture2D" uid="uid://0eeh362x52rs" path="res://restaurant_ap/assets/characters/player.png" id="1_476w8"]
+[ext_resource type="Script" uid="uid://bi1x1nlly8pkf" path="res://restaurant_ap/scenes/entities/player.gd" id="1_ijrrh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ijrrh"]
+radius = 1.0
+height = 2.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1493797892]
+z_index = 4
+script = ExtResource("1_ijrrh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=724983459]
+texture = ExtResource("1_476w8")
+offset = Vector2(0, -149)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=540619444]
+position = Vector2(-3, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ijrrh")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=403094446]
+avoidance_enabled = true

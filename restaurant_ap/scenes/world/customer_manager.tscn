@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://7dbvpedo668p"]
+
+[ext_resource type="Script" uid="uid://cmf0bmnuotw8m" path="res://restaurant_ap/scenes/world/customer_manager.gd" id="1_qdbfo"]
+
+[node name="CustomerManager" type="Node" unique_id=1228012058]
+script = ExtResource("1_qdbfo")
+metadata/_custom_type_script = "uid://cmf0bmnuotw8m"

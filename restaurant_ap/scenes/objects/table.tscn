@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://blwk0kihmvc7q"]
+
+[ext_resource type="Script" uid="uid://b54gdhp3jwk7p" path="res://restaurant_ap/scenes/objects/table.gd" id="1_v8s0i"]
+[ext_resource type="Texture2D" uid="uid://clkr2hvi4wfs3" path="res://restaurant_ap/assets/table_test.png" id="2_hkb76"]
+[ext_resource type="PackedScene" uid="uid://y4iojtkicsrp" path="res://restaurant_ap/scenes/objects/chair.tscn" id="3_hkb76"]
+[ext_resource type="Texture2D" uid="uid://c47etl3gsjcul" path="res://restaurant_ap/assets/table_test_dirty.png" id="3_m436d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0hqtq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hkb76")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_m436d")
+}],
+"loop": true,
+"name": &"dirty",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x48u5"]
+size = Vector2(211, 101)
+
+[node name="Table" type="Area2D" unique_id=253708565 groups=["table"]]
+script = ExtResource("1_v8s0i")
+food_positions = Array[Vector2]([Vector2(-20, -31)])
+target_location = Vector2(0, -10)
+metadata/_custom_type_script = "uid://b54gdhp3jwk7p"
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=747977881]
+sprite_frames = SubResource("SpriteFrames_0hqtq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=21944625]
+position = Vector2(0, -31)
+shape = SubResource("RectangleShape2D_x48u5")
+
+[node name="Chair" parent="." unique_id=1269190185 instance=ExtResource("3_hkb76")]
+z_index = -2
+position = Vector2(-142, -30)

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dn0p0vfpalyrc"]
+
+[ext_resource type="Script" uid="uid://pwwt34met8ai" path="res://restaurant_ap/scenes/world/player_manager.gd" id="1_tubmc"]
+
+[node name="PlayerManager" type="Node" unique_id=1645008745]
+script = ExtResource("1_tubmc")

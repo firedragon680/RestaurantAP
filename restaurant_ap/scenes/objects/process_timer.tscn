@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://brnwrhrs6xmhc"]
+
+[ext_resource type="Script" uid="uid://dpprid68kdjsg" path="res://restaurant_ap/scenes/objects/process_timer.gd" id="1_l8cq8"]
+
+[node name="ProcessTimer" type="ProgressBar" unique_id=1508652802]
+custom_minimum_size = Vector2(100, 15)
+show_percentage = false
+script = ExtResource("1_l8cq8")

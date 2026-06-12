@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b4uhrr7qemfmh"]
+
+[ext_resource type="Texture2D" uid="uid://cfonjhyaxox11" path="res://restaurant_ap/assets/clock.png" id="1_2qroe"]
+[ext_resource type="Script" uid="uid://1h1jplllmq4v" path="res://restaurant_ap/scenes/ui/day_timer.gd" id="1_kyg23"]
+[ext_resource type="Texture2D" uid="uid://poxxsdfi73yk" path="res://restaurant_ap/assets/clockhand.png" id="2_kyg23"]
+
+[node name="DayTimer" type="Node2D" unique_id=767614008 node_paths=PackedStringArray("timer")]
+script = ExtResource("1_kyg23")
+timer = NodePath("Timer")
+
+[node name="Clock" type="Sprite2D" parent="." unique_id=1346172035]
+texture_filter = 1
+texture = ExtResource("1_2qroe")
+offset = Vector2(0, 25)
+
+[node name="Hand" type="Sprite2D" parent="." unique_id=1201364209]
+texture_filter = 1
+texture = ExtResource("2_kyg23")
+centered = false
+offset = Vector2(-3, -4)
+
+[node name="Timer" type="Timer" parent="." unique_id=1843207498]

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://kprq1uuk84yy"]
+
+[ext_resource type="Script" uid="uid://caue7c85us28p" path="res://restaurant_ap/scenes/objects/food_processor.gd" id="1_bljh6"]
+
+[node name="FoodProcessor" type="Area2D" unique_id=618700144 groups=["machine"]]
+script = ExtResource("1_bljh6")
+metadata/_custom_type_script = "uid://caue7c85us28p"

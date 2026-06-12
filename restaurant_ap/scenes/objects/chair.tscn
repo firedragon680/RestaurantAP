@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://y4iojtkicsrp"]
+
+[ext_resource type="Script" uid="uid://cr40hoenmw080" path="res://restaurant_ap/scenes/objects/seat.gd" id="1_8lxff"]
+[ext_resource type="Texture2D" uid="uid://dpg6vbao2qb44" path="res://restaurant_ap/assets/chair_test.png" id="2_ckppe"]
+
+[node name="Chair" type="Node2D" unique_id=1210592769]
+script = ExtResource("1_8lxff")
+seating_offset = Vector2(10, 100)
+metadata/_custom_type_script = "uid://cr40hoenmw080"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1697619262]
+texture = ExtResource("2_ckppe")

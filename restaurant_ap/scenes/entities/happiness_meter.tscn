@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bdkonwuhdgwbt"]
+
+[ext_resource type="Script" uid="uid://btvg7j07hncjy" path="res://restaurant_ap/scenes/entities/happiness_meter.gd" id="1_8iai1"]
+
+[node name="HappinessMeter" type="ProgressBar" unique_id=837689572]
+custom_minimum_size = Vector2(15, 100)
+offset_right = 4.0
+offset_bottom = 27.0
+fill_mode = 3
+show_percentage = false
+script = ExtResource("1_8iai1")
+metadata/_custom_type_script = "uid://btvg7j07hncjy"

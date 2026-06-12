@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b7ehr4fcxh32m"]
+
+[ext_resource type="Script" uid="uid://ctwhsbbhpmkik" path="res://restaurant_ap/scenes/objects/food_storage.gd" id="1_bqn7i"]
+
+[node name="FoodStorage" type="Area2D" unique_id=844718014]
+script = ExtResource("1_bqn7i")
+metadata/_custom_type_script = "uid://n2e4txv6c1ta"
